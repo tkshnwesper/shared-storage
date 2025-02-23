@@ -27,6 +27,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+    namespace "io.alexrintt.sharedstorage"
     compileSdkVersion 30
 
     sourceSets {
@@ -34,6 +35,13 @@ android {
     }
     defaultConfig {
         minSdkVersion 19
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
     }
 }
 
